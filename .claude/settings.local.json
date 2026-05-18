@@ -4,7 +4,12 @@
       "Bash(git init *)",
       "Bash(npm init *)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Skill(figma-use)",
+      "Skill(figma-use:*)",
+      "mcp__plugin_figma_figma__get_design_context",
+      "Bash(npm start *)",
+      "Bash(curl -s http://localhost:8080)"
     ]
   }
 }

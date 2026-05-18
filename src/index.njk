@@ -4,7 +4,21 @@ title: Portfolio
 year: 2026
 ---
 
-<section class="space-y-4">
-  <h1 class="text-4xl font-bold">Hi, I'm Alexander.</h1>
-  <p class="text-xl text-gray-600">Welcome to my portfolio. Here is a test update.</p>
-</section>
+{% from "card-link.njk" import cardLink %}
+
+<div class="flex flex-col items-center px-4 py-8">
+  <div class="flex flex-col gap-8 w-full max-w-[600px]">
+
+    <div class="flex flex-col gap-4 text-white" style="font-family: 'Space Mono', monospace;">
+      <div class="text-xl leading-normal">
+        <p>Hello, I'm Alex Hayashi, a designer and team leader working on design systems and platform standards.</p>
+        <p class="mt-4">I use my classical graphic design training, systems thinking, and technical knowledge to balance visual, experiential, engineering, and human concerns within my work.</p>
+        <p class="mt-4">Currently, I lead the Platform Design team at GoodRx.</p>
+      </div>
+    </div>
+
+    {{ cardLink("Recent work", "#") }}
+    {{ cardLink("Resume", "#") }}
+
+  </div>
+</div>

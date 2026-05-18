@@ -1,0 +1,8 @@
+{% macro cardLink(title, href) %}
+<a href="{{ href }}" class="flex items-center gap-4 w-full bg-[#2e2e2e] hover:bg-[#151515] border border-[#afafaf] p-4 text-white no-underline transition">
+  <span class="flex-1 font-bold text-xl leading-normal" style="font-family: 'Space Mono', monospace;">{{ title }}</span>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+{% endmacro %}
