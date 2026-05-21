@@ -1,6 +1,6 @@
 {% macro grid1(classes="", maxWidth="") %}
 {% if maxWidth %}
-<div class="w-screen relative left-1/2 -translate-x-1/2 px-6">
+<div class="w-screen relative left-1/2 -translate-x-1/2 px-4">
   <div class="grid grid-cols-1 gap-8 mx-auto{{ ' ' + classes if classes }}" style="max-width: {{ maxWidth }}">
     {{ caller() }}
   </div>
@@ -14,7 +14,7 @@
 
 {% macro grid2(classes="", maxWidth="") %}
 {% if maxWidth %}
-<div class="w-screen relative left-1/2 -translate-x-1/2 px-6">
+<div class="w-screen relative left-1/2 -translate-x-1/2 px-4">
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto{{ ' ' + classes if classes }}" style="max-width: {{ maxWidth }}">
     {{ caller() }}
   </div>
@@ -28,7 +28,7 @@
 
 {% macro grid3(classes="", maxWidth="") %}
 {% if maxWidth %}
-<div class="w-screen relative left-1/2 -translate-x-1/2 px-6">
+<div class="w-screen relative left-1/2 -translate-x-1/2 px-4">
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto{{ ' ' + classes if classes }}" style="max-width: {{ maxWidth }}">
     {{ caller() }}
   </div>
