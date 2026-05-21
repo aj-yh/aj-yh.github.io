@@ -1,0 +1,9 @@
+{% macro ul(classes="") %}
+<ul class="flex flex-col gap-3{{ ' ' + classes if classes }}">
+  {{ caller() }}
+</ul>
+{% endmacro %}
+
+{% macro li() %}
+<li class="flex gap-4 before:content-['•'] before:shrink-0">{{ caller() }}</li>
+{% endmacro %}

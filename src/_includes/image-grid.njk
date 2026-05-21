@@ -1,0 +1,61 @@
+{% macro grid1(classes="", maxWidth="") %}
+{% if maxWidth %}
+<div class="w-screen relative left-1/2 -translate-x-1/2 px-6">
+  <div class="grid grid-cols-1 gap-8 mx-auto{{ ' ' + classes if classes }}" style="max-width: {{ maxWidth }}">
+    {{ caller() }}
+  </div>
+</div>
+{% else %}
+<div class="grid grid-cols-1 gap-8{{ ' ' + classes if classes }}">
+  {{ caller() }}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro grid2(classes="", maxWidth="") %}
+{% if maxWidth %}
+<div class="w-screen relative left-1/2 -translate-x-1/2 px-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto{{ ' ' + classes if classes }}" style="max-width: {{ maxWidth }}">
+    {{ caller() }}
+  </div>
+</div>
+{% else %}
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8{{ ' ' + classes if classes }}">
+  {{ caller() }}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro grid3(classes="", maxWidth="") %}
+{% if maxWidth %}
+<div class="w-screen relative left-1/2 -translate-x-1/2 px-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-auto{{ ' ' + classes if classes }}" style="max-width: {{ maxWidth }}">
+    {{ caller() }}
+  </div>
+</div>
+{% else %}
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8{{ ' ' + classes if classes }}">
+  {{ caller() }}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro gridEmbed(src, caption="", aspect="16/9") %}
+<figure class="flex flex-col gap-2 m-0">
+  <div style="aspect-ratio: {{ aspect }}; position: relative;">
+    <iframe src="{{ src }}" class="absolute inset-0 w-full h-full" frameborder="0" allowfullscreen></iframe>
+  </div>
+  {% if caption %}
+  <figcaption class="text-sm text-[#afafaf]">{{ caption }}</figcaption>
+  {% endif %}
+</figure>
+{% endmacro %}
+
+{% macro gridImage(src, alt, caption="") %}
+<figure class="flex flex-col gap-2 m-0">
+  <img src="{{ src }}" alt="{{ alt }}" class="w-full object-cover cursor-zoom-in" data-lightbox data-caption="{{ caption }}" />
+  {% if caption %}
+  <figcaption class="text-sm text-[#afafaf]">{{ caption }}</figcaption>
+  {% endif %}
+</figure>
+{% endmacro %}

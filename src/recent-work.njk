@@ -7,12 +7,13 @@ year: 2026
 {% from "card-link.njk" import cardLink %}
 
 <div class="flex flex-col items-center px-4 py-8">
-  <div class="flex flex-col gap-8 w-full max-w-[600px]">
+  <div class="flex flex-col gap-8 w-full max-w-[700px]">
 
-    <div class="flex flex-col gap-4 text-white" style="font-family: 'Space Mono', monospace;">
+    <div class="flex flex-col gap-4 text-white" style="font-family: 'Space Grotesk', sans-serif;">
+      <h2>GoodRx, Platform Design (2021&ndash;Present)</h2>
       <div class="text-xl leading-normal">
         <p>The Platform Design team is responsible for wide variety of fundamental aspects of the GoodRx ecosystem, including:</p>
-        <ul class="list-disc list-inside mt-4">
+        <ul class="list-disc list-outside mt-4">
           <li>Building, maintaining, and evolving the Web, iOS, and Android design systems</li>
           <li>Building, maintaining, and evolving the Web navigation system & components</li>
           <li>Setting the Mobile App design strategy & maintaining end-to-end UI/UX quality</li>
@@ -21,8 +22,9 @@ year: 2026
       </div>
     </div>
 
-    {{ cardLink("Recent work", "#") }}
-    {{ cardLink("Resume", "#") }}
+    {{ cardLink("(Re)building and evolving the design system", "/design-system/") }}
+    {{ cardLink("Creating “Universal Navigation” for the Web experience", "#") }}
+    {{ cardLink("Refreshing the Mobile App information architecture", "#") }}
 
   </div>
 </div>

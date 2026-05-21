@@ -1,0 +1,94 @@
+---
+layout: base.njk
+title: Refreshing the Mobile App information architecture
+year: 2026
+---
+{% from "list.njk" import ul, li %}
+{% from "image-grid.njk" import grid1, grid2, grid3, gridImage, gridEmbed %}
+
+<div class="flex flex-col items-center px-4 py-8">
+  <div class="flex flex-col gap-12 w-full max-w-[700px] text-white" style="font-family: 'Space Grotesk', sans-serif;">
+
+    <h1 class="text-4xl">Refreshing the Mobile App information architecture</h1>
+
+    <section class="flex flex-col gap-4">
+      
+      <h2 class="text-xl">Role</h2>
+      {% call ul("text-base leading-relaxed") %}
+        {% call li() %}Drove cross-team alignment and stakeholder buy-in to move project forward{% endcall %}
+        {% call li() %}Collaborated with product and engineering leaders to plan and execute a seamless rollout{% endcall %}
+        {% call li() %}Provided ongoing design feedback and shaped the overall direction{% endcall %}
+      {% endcall %}
+      <p class="text-base text-[#afafaf] italic">Credit goes to Faye Xu for her work on this project. The final IA and UI/UX are the product of her hard work! Special thanks to Jen Cotton for helping get this initiative prioritized and keeping us accountable along the way.</p>
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-xl">Context</h2>
+      <div class="text-base leading-relaxed flex flex-col gap-4">
+        <p>Through years of individual feature launches without a holistic plan, the GoodRx Mobile App had become a bit of a Frankenstein’s monster. The landing pages for each navigation tab did not serve clear purposes. For example, Home had become a hodgepodge of medication management, saved items, promotions, and more. With new product launches ever approaching, it became clear that we needed a more rational information architecture to be able to appropriately scale and surface things in the appropriate place.</p>
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-xl">Auditing</h2>
+      <div class="text-base leading-relaxed flex flex-col gap-4">
+        <p>In order to understand the full scope of the information architecture, extensive auditing and diagramming was necessary to map out the relationship of different pages, features, and objects to each other. Through this process, we understood where pockets of complexity lay, and could start creating more rational frameworks for organizing the necessary pieces.</p>
+      </div>
+
+      {% call grid3(classes="mt-8", maxWidth="1200px") %}
+        {{ gridImage("/images/ia-audit-1.png", "", "A diagram mapping objects to their parent groupings.") }}
+        {{ gridImage("/images/ia-audit-2.png", "", "A diagram mapping different prescription types through fulfillment steps.") }}
+        {{ gridImage("/images/ia-audit-3.png", "", "A diagram mapping metadata to different object types.") }}
+      {% endcall %}
+
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-xl">Diverging</h2>
+      <div class="text-base leading-relaxed flex flex-col gap-4">
+        <p>With a better understanding of the full scope, we put together three divergent directions we could user-test and present to senior stakeholders. This exercise helped us avoid committing to a particular direction too early in the process and built confidence that our final direction was the right one.</p>
+      </div>
+
+      {% call grid3(classes="mt-8", maxWidth="1200px") %}
+        {{ gridImage("/images/ia-wires-1.png", "", "Wireframes for a search & savings focused information architecture.") }}
+        {{ gridImage("/images/ia-wires-2.png", "", "Wireframes for a personalized & timely information architecture.") }}
+        {{ gridImage("/images/ia-wires-3.png", "", "Wireframes for an action-based information architecture.") }}
+      {% endcall %}
+
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-xl">Converging</h2>
+      <div class="text-base leading-relaxed flex flex-col gap-4">
+        <p>Through extensive cross-team conversation, synthesizing research results, and diving deep into the details, we aligned on a solution that combined the best parts of the three original directions. Then, in collaboration with designers from different teams, we created engineering-ready designs for all the key screens, states, and flows. The initial version of this IA refresh launched in late 2025, and further slices are continuing to release through 2026.</p>
+      </div>
+      
+      {% call grid2(classes="mt-8", maxWidth="1200px") %}
+        {{ gridImage("/images/ia-final.png", "", "A triptych of the main landing views within the updated Mobile App information architecture.") }}
+        {{ gridImage("/images/ia-med-tab.png", "", "A zoomed out view of the engineering-ready screens for the Medications tab, which mapped out different states and flows.") }}
+      {% endcall %}
+
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-xl">Impact</h2>
+      <div class="text-base leading-relaxed flex flex-col gap-4">
+        <p>The immediate focus for this project was enabling future scalability, in alignment with the company’s long-term strategy around new feature launches and business lines. The IA that launched was successful in creating that scalable framework, and also established a governance system for ensuring continued coherence over time.</p>
+        <p>While the metrics we tracked were positioned as guardrails, we actually drove meaningful improvement to key metrics as well. These tangible improvements helped prove out the theory that UX- and scalability-focused changes can also deliver material business benefits, in addition to internal enablement. Some of the metric improvements included:</p>
+        <h3 class="text-lg">iOS</h3>
+        {% call ul() %}
+          {% call li() %}Total authentication increased by ~11%, account creation by ~7%, and logged-in rate by ~5%{% endcall %}
+          {% call li() %}Search completion increased by 4%{% endcall %}
+          {% call li() %}Price page views (a key business metric) increased by ~11%{% endcall %}
+        {% endcall %}
+        <h3 class="text-lg">Android</h3>
+        {% call ul() %}
+          {% call li() %}Total authentication increased by ~12%, account creation by ~8%, and logged-in rate by ~4%{% endcall %}
+          {% call li() %}Search completion increased by 12%{% endcall %}
+          {% call li() %}Price page views (a key business metric) increased by ~17%{% endcall %}
+        {% endcall %}
+      </div>
+    </section>
+
+  </div>
+</div>

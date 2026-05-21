@@ -5,20 +5,37 @@ year: 2026
 ---
 
 {% from "card-link.njk" import cardLink %}
+{% from "list.njk" import ul, li %}
 
 <div class="flex flex-col items-center px-4 py-8">
-  <div class="flex flex-col gap-8 w-full max-w-[600px]">
+  <div class="flex flex-col gap-8 w-full max-w-[700px]">
 
-    <div class="flex flex-col gap-4 text-white" style="font-family: 'Space Mono', monospace;">
-      <div class="text-xl leading-normal">
-        <p>Hello, I'm Alex Hayashi, a designer and team leader working on design systems and platform standards.</p>
+    <div class="flex flex-col gap-4 text-white" style="font-family: 'Space Grotesk', sans-serif;">
+      <div class="text-base leading-normal">
+        <h1 class="text-4xl">Hi, I’m Alex Hayashi!</h1>
+        <p class="mt-4">I’m a designer and team leader working on design systems and platform standards.</p>
         <p class="mt-4">I use my classical graphic design training, systems thinking, and technical knowledge to balance visual, experiential, engineering, and human concerns within my work.</p>
-        <p class="mt-4">Currently, I lead the Platform Design team at GoodRx.</p>
+        <p class="mt-4">Currently, I lead the Platform Design team at GoodRx. For a more thorough work history and an overview of my experience, please take a look at the resume below.</p>
       </div>
     </div>
 
-    {{ cardLink("Recent work", "recent-work") }}
     {{ cardLink("Resume", "#") }}
+
+    <div class="text-base leading-normal">
+        <h2 class="text-2xl">GoodRx, Platform Design (2021–Present)</h2>
+        <p class="mt-4">The Platform Design team is responsible for a wide variety of fundamental aspects of the GoodRx ecosystem, including:</p>
+        {% call ul("mt-4") %}
+          {% call li() %}Building, maintaining, and evolving the Web, iOS, and Android design systems{% endcall %}
+          {% call li() %}Building, maintaining, and evolving the Web navigation system & components{% endcall %}
+          {% call li() %}Setting the Mobile App design strategy & maintaining end-to-end UI/UX quality{% endcall %}
+        {% endcall %}
+        <p class="mt-4">In my time at GoodRx, I’ve shepherded the team and the organization through a wide variety of challenges and opportunities. Here are a few representative case studies:</p>
+      </div>
+
+    {{ cardLink("Building and evolving the design system", "/design-system/") }}
+    {{ cardLink("Creating “Universal Navigation” for the Web experience", "/universal-nav/") }}
+    {{ cardLink("Refreshing the Mobile App information architecture", "/mobile-ia/") }}
+    
 
   </div>
 </div>
