@@ -1,5 +1,5 @@
-{% macro cardLink(title, href) %}
-<a href="{{ href }}" class="inline-flex self-start items-center gap-2 bg-[#2e2e2e] hover:bg-[#151515] border border-[#afafaf] rounded-lg p-2 text-white no-underline transition">
+{% macro cardLink(title, href, newTab) %}
+<a href="{{ href }}" {% if newTab %}target="_blank" rel="noopener noreferrer"{% endif %} class="inline-flex self-start items-center gap-2 bg-[#2e2e2e] hover:bg-[#151515] border border-[#afafaf] rounded-lg p-2 text-white no-underline transition">
   <span class="font-bold text-base leading-normal" style="font-family: 'Space Grotesk', sans-serif;">{{ title }}</span>
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
